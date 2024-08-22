@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TableComponent from './components/TableComponent';
+import { NextUIProvider } from '@nextui-org/react';
+import Category from './components/Category';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <NextUIProvider>
+      <App/>
+    </NextUIProvider>
   </React.StrictMode>
 );
 
