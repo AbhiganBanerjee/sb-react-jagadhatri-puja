@@ -122,7 +122,7 @@ function App() {
     loadConfetti();
 
     //Load all the Pictures
-    axios('https://sbjagadhatriapi-k7txic59.b4a.run/getPics')
+    axios('https://sb-jagadhatri-api.onrender.com/getPics')
     .then((res)=>{
       setPhotos(res.data);
       console.log(res.data);
@@ -132,7 +132,7 @@ function App() {
     })
 
     //Load all the years
-    axios('https://sbjagadhatriapi-k7txic59.b4a.run/getYears')
+    axios('https://sb-jagadhatri-api.onrender.com/getYears')
     .then((res)=>{ 
       res.data.unshift("2009");
       res.data.unshift("All");
@@ -165,7 +165,7 @@ function App() {
     //confetti onchange
     loadConfetti();
     
-    axios(`https://sbjagadhatriapi-k7txic59.b4a.run/getPicByYear/${e.target.value}`)
+    axios(`https://sb-jagadhatri-api.onrender.com/getPicByYear/${e.target.value}`)
     .then((res)=>{
       setPhotos(res.data);
       console.log(res.data);
